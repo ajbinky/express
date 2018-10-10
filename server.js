@@ -29,7 +29,7 @@ hbs.registerHelper('getCurrentYear', () => {
 
 hbs.registerHelper('screamIt', text => text.toUpperCase());
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
